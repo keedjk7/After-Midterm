@@ -6,11 +6,11 @@ using namespace std;
 int count_array(char input[100]){
 	int count,de=0;
 	while(input[count]!='\0'){
-		count++;
-		if(input[count]==' '){
+		while(input[count]==' '){
 			count++;
 			de++;
 		}
+		count++;
 	}	
 	count-=de;	
 	
