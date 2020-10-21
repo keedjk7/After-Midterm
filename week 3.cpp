@@ -17,7 +17,6 @@ void OUTPUT(int *x){
 void calculation(int *x,int limit){
 	bool pass=false;
 	while(pass!=true){
-		cout<<*x;
 		int count=0,space=0,Again=0;
 		string input="\0";
 		cout<<"Input String : ";
