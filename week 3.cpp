@@ -5,10 +5,10 @@ using namespace std;
 
 int output[100];
 
-void OUTPUT(int x){
+void OUTPUT(int *x){
 	cout<<" Final Out : ";
-	if(x>0){
-		for(int i=x-1;i>=0;i--){
+	if(*x>0){
+		for(int i=*x-1;i>=0;i--){
 		    cout<<output[i];
 	    }
 	}
@@ -17,8 +17,9 @@ void OUTPUT(int x){
 void calculation(int *x,int limit){
 	bool pass=false;
 	while(pass!=true){
+		cout<<*x;
 		int count=0,space=0,Again=0;
-		string input;
+		string input="\0";
 		cout<<"Input String : ";
 		if(*x==0){
 			cin.ignore();
@@ -60,7 +61,7 @@ void calculation(int *x,int limit){
 		}
 		
 		output[*x]=Again;
-		x++;
+		*x+=1;
 	}
 }
 
@@ -71,7 +72,7 @@ int main(){
 	
 	calculation(&x,limit);
 	
-	OUTPUT(x);
+	OUTPUT(&x);
 	
 	return 0;
 }
