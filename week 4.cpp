@@ -19,10 +19,11 @@ bool prime_number(int *input){
 					else{
 						if(number%i==0){
 						   cout<<i<<" ";
+						   count_prime++;
 						   sum+=i;
 					       number/=i;
 						   check_out=true;
-						break;
+						   break;
 				        }   
 					}
 				}
@@ -30,6 +31,7 @@ bool prime_number(int *input){
 			else{
 				if(check_prime!=true&&number%i==0){
 					cout<<i<<" ";
+					count_prime++;
 					sum+=i;
 					number/=i;
 					check_out=true;
